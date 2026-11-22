@@ -1,0 +1,160 @@
+/* 卡面揭示复用既有设计变量与翻牌效果。 */
+.v3-effect.event-overlay {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s4);
+  padding: max(var(--s8), env(safe-area-inset-top)) var(--s5) max(var(--s6), env(safe-area-inset-bottom));
+  background: color-mix(in oklch, var(--bg-canvas) 97%, transparent);
+  color: var(--text-primary);
+  overflow: hidden;
+  isolation: isolate;
+  text-wrap: pretty;
+  animation: fx-enter var(--slow) var(--ease) both;
+}
+.v3-effect::backdrop { background: var(--bg-canvas); }
+.v3-effect__body { display: grid; justify-items: center; align-content: center; width: min(100%, 680px); min-width: 0; min-height: 0; }
+.v3-effect__identity { display: flex; align-items: center; justify-content: center; gap: var(--s5); max-width: 100%; padding-block: var(--s4); }
+.v3-effect__avatar { position: relative; display: inline-flex; flex-shrink: 0; }
+.v3-effect .fx-name-crown { display: inline; width: 1em; height: 1em; margin-left: var(--s2); color: var(--gold); transform: translateY(.125em); }
+.v3-effect__copy { min-width: 0; }
+.v3-effect__copy .eyebrow { color: var(--text-secondary); letter-spacing: .16em; }
+.v3-effect__copy h2 { margin: var(--s2) 0 0; font-size: clamp(var(--text-xl), 5.2vw, var(--text-3xl)); line-height: 1.55; font-weight: var(--weight-bold); overflow-wrap: anywhere; }
+.v3-effect__hint { position: absolute; bottom: max(var(--s5), env(safe-area-inset-bottom)); left: var(--s5); right: var(--s5); text-align: center; color: var(--text-tertiary); font-size: var(--text-xs); }
+.v3-effect__media-error { width: min(100%, 480px); margin: 0; padding: var(--s2) var(--s3); font-size: var(--text-xs); color: var(--danger); background: var(--danger-bg); border-radius: var(--r-sm); position: relative; z-index: 1; }
+.v3-effect .effect-close { top: max(var(--s4), env(safe-area-inset-top)); right: var(--s4); z-index: 2; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.v3-effect .preview-label { color: var(--text-secondary); }
+.v3-effect__card { width: min(32dvh, 200px); aspect-ratio: 2/3; margin-bottom: var(--s6); animation: fx-card-flip .7s var(--ease) both; }
+.v3-effect__card img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-card); }
+/* 所有牌统一展示已有卡面；暂停及减少动态设置继续生效。 */
+.v3-effect.is-paused *, .v3-effect.is-paused { animation-play-state: paused !important; }
+.v3-effect.is-reduced *, .v3-effect.is-reduced { animation: none !important; filter: none !important; }
+@keyframes fx-enter { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fx-card-flip { from { opacity: 0; transform: perspective(900px) rotateY(80deg) scale(.9); } to { opacity: 1; transform: perspective(900px) rotateY(0) scale(1); } }
+@media (orientation: landscape) and (max-height: 500px) {
+  .v3-effect__body { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); width: min(100%, 880px); align-items: center; gap: var(--s5); }
+  .v3-effect__identity { flex-direction: column; gap: var(--s2); padding: 0; text-align: center; }
+  .v3-effect__copy h2 { font-size: var(--text-xl); line-height: 1.4; }
+  .v3-effect__card { width: min(36dvh, 180px); margin: 0; }
+  .v3-effect__hint { bottom: var(--s2); }
+}
+@media (max-width: 360px) {
+  .v3-effect__identity { gap: var(--s3); }
+  .v3-effect__copy h2 { font-size: var(--text-xl); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .v3-effect, .v3-effect * { animation: none !important; }
+}
+
+/* 国王沿用首版放射光、光环、皇冠及暗纹；其余牌只给原卡面加光。 */
+.v3-effect.is-royal .event-copy h2 { font-family: var(--font-display); font-size: clamp(28px, 5vw, 52px); line-height: 1.5; }
+.v3-effect.is-royal .event-copy .eyebrow { color: var(--gold); }
+.v3-effect.is-royal .event-person { margin-top: var(--s10); }
+.v3-effect.is-card-light .event-art { opacity: .12; }
+.v3-effect.is-card-light .event-particles { display: none; }
+.card-lights { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.card-lights > i {
+  position: absolute; left: 15%; top: 12%; width: 70%; height: 65%;
+  background: radial-gradient(ellipse, color-mix(in oklch, var(--light-color, var(--gold)) 28%, transparent), transparent 68%);
+  opacity: 0; transform-origin: center;
+  animation: var(--light-motion, light-bloom) var(--light-duration, 1100ms) var(--ease) calc(var(--i) * var(--light-stagger, 70ms)) var(--light-repeat, 1) both;
+}
+.card-lights > i:nth-child(even) { --light-side: -1; }
+.card-lights > i:nth-child(odd) { --light-side: 1; }
+.card-effect-c01 { --light-motion: light-split; --light-color: var(--text-primary); --light-duration: 750ms; }
+.card-effect-c02 { --light-motion: light-pulse; --light-duration: 350ms; --light-stagger: 150ms; }
+.card-effect-c04 { --light-motion: light-five-slash; --light-duration: 220ms; }
+.card-effect-c04 .card-lights > i {
+  top: calc(24% + var(--i) * 8%); width: 72%; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--text-primary), transparent);
+  box-shadow: 0 0 20px 3px color-mix(in oklch, var(--gold) 22%, transparent);
+  animation-delay: calc(150ms + var(--i) * 150ms);
+}
+.card-effect-c04 .card-lights > i:nth-child(1) { --slash-angle: -55deg; }
+.card-effect-c04 .card-lights > i:nth-child(2) { --slash-angle: 28deg; }
+.card-effect-c04 .card-lights > i:nth-child(3) { --slash-angle: -12deg; }
+.card-effect-c04 .card-lights > i:nth-child(4) { --slash-angle: 62deg; }
+.card-effect-c04 .card-lights > i:nth-child(5) { --slash-angle: -35deg; }
+.card-effect-c05 { --light-motion: light-cross; --light-duration: 850ms; --light-stagger: 40ms; }
+.card-effect-c06 { --light-motion: light-from-right; --light-color: var(--accent-fg); --light-duration: 1000ms; }
+.card-effect-c07 { --light-motion: light-rise; --light-color: var(--accent-fg); --light-duration: 2000ms; --light-stagger: 180ms; }
+.card-effect-c08 { --light-motion: light-bloom; --light-color: var(--accent-fg); --light-duration: 2200ms; --light-stagger: 250ms; }
+.card-effect-c08 .card-lights > i { background: radial-gradient(ellipse, color-mix(in oklch, pink 20%, transparent), transparent 65%); }
+.card-effect-c09 { --light-motion: light-bloom; --light-duration: 850ms; --light-color: var(--gold); }
+.card-effect-c10 { --light-motion: light-gather; --light-duration: 950ms; --light-stagger: 30ms; }
+.card-effect-c11 { --light-motion: light-hold; --light-color: var(--text-secondary); --light-duration: 1200ms; --light-stagger: 0ms; }
+.card-effect-c12 { --light-motion: light-join; --light-duration: 1800ms; --light-stagger: 100ms; }
+.card-effect-c13 { --light-motion: light-pull; --light-duration: 1800ms; --light-color: var(--accent-fg); --light-stagger: 80ms; }
+.card-effect-c14 { --light-motion: light-from-right; --light-duration: 2000ms; --light-color: var(--text-secondary); --light-stagger: 110ms; }
+.card-effect-c15 { --light-motion: light-descend; --light-duration: 2600ms; --light-stagger: 60ms; }
+.card-effect-c15 .v3-effect__card { animation: light-approach 2800ms var(--ease) both; }
+.card-effect-c16 { --light-motion: light-edge; --light-color: var(--accent-fg); --light-duration: 800ms; --light-stagger: 85ms; }
+.card-effect-c17 { --light-motion: light-rise; --light-duration: 950ms; --light-stagger: 90ms; }
+.card-effect-c18 { --light-motion: light-curtain; --light-duration: 2200ms; --light-stagger: 150ms; }
+.card-effect-c18 .card-lights > i { width: 35%; left: 32.5%; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--gold) 18%, transparent), transparent); }
+.card-effect-c19 { --light-motion: light-join; --light-color: var(--text-secondary); --light-duration: 850ms; --light-stagger: 35ms; }
+.card-effect-c20 { --light-motion: light-bloom; --light-color: var(--ornament); --light-duration: 1000ms; --light-stagger: 90ms; }
+.card-effect-c21 { --light-motion: light-pass; --light-color: var(--accent-fg); --light-duration: 850ms; --light-stagger: 75ms; }
+.card-effect-c22 { --light-motion: light-clash; --light-color: var(--text-primary); --light-duration: 900ms; --light-stagger: 0ms; }
+.card-effect-c23 { --light-motion: light-arrive; --light-duration: 2200ms; --light-stagger: 120ms; }
+.card-effect-c24 { --light-motion: light-pulse; --light-duration: 260ms; --light-stagger: 160ms; --light-color: var(--text-secondary); }
+.card-effect-c25 { --light-motion: light-kiss; --light-color: var(--accent-fg); --light-duration: 950ms; --light-stagger: 80ms; }
+.card-effect-c26 { --light-motion: light-slash; --light-color: var(--ornament); --light-duration: 950ms; --light-stagger: 60ms; }
+.card-effect-c27 { --light-motion: light-split; --light-color: var(--accent-fg); --light-duration: 950ms; --light-stagger: 90ms; }
+.card-effect-c28 { --light-motion: light-rise; --light-duration: 1150ms; --light-stagger: 25ms; }
+.card-effect-c29 { --light-motion: light-candle; --light-duration: 2200ms; --light-stagger: 180ms; }
+.card-effect-c30 { --light-motion: light-impact; --light-color: var(--accent-fg); --light-duration: 1300ms; --light-stagger: 0ms; }
+.card-effect-c31 { --light-motion: light-gather; --light-color: var(--ornament); --light-duration: 1000ms; --light-stagger: 100ms; }
+.card-effect-c32 { --light-motion: light-pass; --light-color: var(--text-primary); --light-duration: 550ms; --light-stagger: 180ms; }
+.card-effect-c32 .card-lights > i:nth-child(n+4) { display: none; }
+.card-effect-c07 .event-particles, .card-effect-c08 .event-particles,
+.card-effect-c13 .event-particles, .card-effect-c14 .event-particles,
+.card-effect-c16 .event-particles, .card-effect-c20 .event-particles,
+.card-effect-c21 .event-particles, .card-effect-c29 .event-particles { display: block; }
+.is-card-light .event-particles > span { animation-duration: 1100ms; }
+.card-effect-c07 .event-particles > span, .card-effect-c08 .event-particles > span { animation-duration: 2800ms; }
+.card-effect-c13 .event-particles > span, .card-effect-c14 .event-particles > span { width: 3px; height: 3px; border-radius: 50%; animation: candle-rise 1600ms var(--ease) both; animation-delay: calc(500ms + var(--particle) * 60ms); }
+.card-effect-c29 .event-particles > span { width: 5px; height: 10px; border-radius: 0; background: var(--gold); animation: petal-fall 2400ms var(--ease) both; animation-delay: calc(600ms + var(--particle) * 80ms); }
+.card-effect-c29 .event-particles > span:nth-child(odd) { background: var(--accent-fg); }
+@keyframes light-bloom { 0% { opacity: 0; transform: scale(.45); } 45% { opacity: .65; } 100% { opacity: 0; transform: scale(1.4); } }
+@keyframes light-pulse { 0% { opacity: 0; transform: scale(.65); } 40% { opacity: .7; } 100% { opacity: 0; transform: scale(1.15); } }
+@keyframes light-gather { 0% { opacity: 0; transform: scale(1.6); } 55% { opacity: .6; } 100% { opacity: 0; transform: scale(.5); } }
+@keyframes light-cross { 0% { opacity: 0; transform: translateX(calc(var(--light-side) * 70vw)); } 45% { opacity: .55; } 100% { opacity: 0; transform: translateX(calc(var(--light-side) * -50vw)); } }
+@keyframes light-split { 0% { opacity: 0; transform: scaleX(.2); } 25% { opacity: .6; } 100% { opacity: 0; transform: translateX(calc(var(--light-side) * 40vw)) scaleX(.7); } }
+@keyframes light-slash { 0% { opacity: 0; transform: translate(-70vw, 15vh) rotate(-25deg) scaleX(.3); } 30% { opacity: .85; } 65% { opacity: .6; } 100% { opacity: 0; transform: translate(55vw, -15vh) rotate(-25deg) scaleX(1.2); } }
+@keyframes light-five-slash { 0% { opacity: 0; transform: rotate(var(--slash-angle)) translateX(-65vw) scaleX(.3); } 35% { opacity: .9; } 65% { opacity: .7; } 100% { opacity: 0; transform: rotate(var(--slash-angle)) translateX(65vw) scaleX(1.1); } }
+@keyframes light-rise { 0% { opacity: 0; transform: translateY(40vh) scale(.8); } 45% { opacity: .6; } 100% { opacity: 0; transform: translateY(-20vh) scale(1.2); } }
+@keyframes light-descend { 0% { opacity: 0; transform: translateY(-35vh) scale(1.2); } 55% { opacity: .6; } 100% { opacity: 0; transform: translateY(12vh) scale(.8); } }
+@keyframes light-from-right { 0% { opacity: 0; transform: translateX(65vw); } 40% { opacity: .5; transform: translateX(0); } 70% { opacity: .5; transform: translateX(-12vw); } 100% { opacity: 0; transform: translateX(-18vw); } }
+@keyframes light-join { 0% { opacity: 0; transform: translateX(calc(var(--light-side) * 60vw)) scaleX(.5); } 60% { opacity: .65; transform: translateX(0) scaleX(.7); } 100% { opacity: 0; transform: translateX(0) scaleX(.9); } }
+@keyframes light-pull { 0% { opacity: 0; transform: translateX(25vw) scaleX(.5); } 35% { opacity: .65; } 60% { transform: translateX(-20vw) scaleX(1.4); } 67% { transform: translate(-21vw, -3px) scaleX(1.4); } 74% { transform: translate(-20vw, 2px) scaleX(1.4); } 100% { opacity: 0; transform: translateX(-20vw) scaleX(1.4); } }
+@keyframes light-hold { 0% { opacity: 0; transform: scale(.8); } 15%, 80% { opacity: .4; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes light-edge { 0% { opacity: 0; transform: translateX(-25vw) scaleX(.1); } 50% { opacity: .6; } 100% { opacity: 0; transform: translateX(25vw) scaleX(.1); } }
+@keyframes light-curtain { 0% { opacity: 0; transform: scaleX(.2); } 30% { opacity: .6; } 100% { opacity: 0; transform: translateX(calc(var(--light-side) * 45vw)) scaleX(.6); } }
+@keyframes light-pass { 0% { opacity: 0; transform: translateX(-60vw) rotate(20deg) scaleX(.4); } 45% { opacity: .5; } 100% { opacity: 0; transform: translateX(60vw) rotate(20deg) scaleX(.4); } }
+@keyframes light-clash { 0% { opacity: 0; transform: translateX(calc(var(--light-side) * 65vw)) scaleX(.5); } 45% { opacity: .75; transform: translateX(0) scaleX(.3); } 100% { opacity: 0; transform: scale(1.3); } }
+@keyframes light-arrive { 0% { opacity: 0; transform: translateX(-65vw); } 45% { opacity: .6; transform: translateX(4vw); } 65% { opacity: .5; transform: translateX(-2vw); } 100% { opacity: 0; transform: translateX(0); } }
+@keyframes light-kiss { 0% { opacity: 0; transform: translateX(calc(var(--light-side) * 20vw)) scale(.6); } 50% { opacity: .5; transform: translateX(0) scale(1); } 100% { opacity: 0; transform: scale(1.2); } }
+@keyframes light-candle { 0% { opacity: 0; transform: translateY(25vh) scaleX(.4); } 35% { opacity: .5; } 50% { opacity: .35; } 65% { opacity: .55; } 100% { opacity: 0; transform: translateY(-10vh) scaleX(.6); } }
+@keyframes light-impact { 0% { opacity: 0; transform: translate(50vw, -30vh) rotate(-25deg) scaleX(.3); } 40% { opacity: .65; transform: translate(0, 0) rotate(-25deg) scaleX(.4); } 47% { transform: translate(-5px, 2px) rotate(-25deg) scaleX(.6); } 54% { transform: translate(3px, -1px) rotate(-25deg) scaleX(.6); } 100% { opacity: 0; transform: scale(1.2); } }
+@keyframes light-approach { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: scale(1.03); } }
+.v3-effect.is-reduced .card-lights, .v3-effect.is-reduced .event-particles, .v3-effect.is-reduced .event-rays { display: none; }
+@media (orientation: landscape) and (max-height: 500px) {
+  .v3-effect.is-royal { flex-direction: row; }
+  .v3-effect.is-royal .event-person { margin-top: var(--s10); }
+  .v3-effect.is-royal .event-copy { max-width: min(56vw, 420px); padding: var(--s3); }
+  .v3-effect.is-royal .event-copy h2 { font-size: var(--text-2xl); }
+  .v3-effect.is-royal .event-crown { width: 72px; height: 58px; top: -65px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .v3-effect .card-lights, .v3-effect .event-rays, .v3-effect .event-particles { display: none; }
+}
+
+/* 装饰光线在独立图层裁切，旋转不扩大弹窗滚动区域。 */
+.event-rays-frame { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; }

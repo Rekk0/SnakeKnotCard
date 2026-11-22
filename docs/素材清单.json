@@ -1,0 +1,347 @@
+[
+  {
+    "file": "public/art/brand/card-back.png",
+    "bytes": 2706165,
+    "sha256": "e6ecd47957c6430e759db1b28b1a67cda5dbda82a72d8c47dc9202cca7fa078e"
+  },
+  {
+    "file": "public/art/brand/card-back.webp",
+    "bytes": 159980,
+    "sha256": "454f1ed152d9e0151cc19df4c290d59cbdb57bced36f697ce3148bdc07f3e534"
+  },
+  {
+    "file": "public/art/brand/logo.png",
+    "bytes": 1242067,
+    "sha256": "c4a718af4a06c24f31fe9a0d3f673055ca6a5ba8d6818606e9337f23943fc54a"
+  },
+  {
+    "file": "public/art/brand/logo.webp",
+    "bytes": 6114,
+    "sha256": "f9d0e4778f8df7b82c859db5e7e35e5307b1a96528444ac029b34b27fe7cd32e"
+  },
+  {
+    "file": "public/art/cards/c01.png",
+    "bytes": 2690102,
+    "sha256": "41e151e8729027a3ae283a989dc46a5e492ccff66a48d945092ff98182f61a5a"
+  },
+  {
+    "file": "public/art/cards/c01.webp",
+    "bytes": 128504,
+    "sha256": "01c2359a2fbd149a7f68447718e543a37ac8b8e10649e1153db45138786020d8"
+  },
+  {
+    "file": "public/art/cards/c02.png",
+    "bytes": 2083302,
+    "sha256": "199b719ce64cd3c3ca1e9c8e04dd995147369142a86bd17dad0768b7e3812464"
+  },
+  {
+    "file": "public/art/cards/c02.webp",
+    "bytes": 109434,
+    "sha256": "ccc02d37e37a2c28eed8c264985b047a77fd27cdfbba3a9622a05aea353e2280"
+  },
+  {
+    "file": "public/art/cards/c03.png",
+    "bytes": 2691389,
+    "sha256": "ae8014e7d9efdb4425f12fea98881693f081f5e582f6465d22e18595daa8318f"
+  },
+  {
+    "file": "public/art/cards/c03.webp",
+    "bytes": 174526,
+    "sha256": "a4a5b5643a6be76185ee22e6e157ee9f09dca8ece7f571cf1b6eb05972121778"
+  },
+  {
+    "file": "public/art/cards/c04.png",
+    "bytes": 2703356,
+    "sha256": "e8bf10ff014de73ffa1af38f14a5dc4910466e2c76cd5c9ff8e93ed73e4090a5"
+  },
+  {
+    "file": "public/art/cards/c04.webp",
+    "bytes": 162358,
+    "sha256": "23f21e743de8eda3847bc02fee6258144376a2511fb8f3cf81b70292faaff563"
+  },
+  {
+    "file": "public/art/cards/c05.png",
+    "bytes": 2678838,
+    "sha256": "784942fbf8100eb4746c822a8810bc72e139167d336f260da69da65f40d7d41a"
+  },
+  {
+    "file": "public/art/cards/c05.webp",
+    "bytes": 146884,
+    "sha256": "7a2eab8b9be46b74c4e3bcbe5ec1458c8bcb6c6411e8fe1ac4a570f65c1707d0"
+  },
+  {
+    "file": "public/art/cards/c06.png",
+    "bytes": 2698733,
+    "sha256": "987abb265d22678ff29dc89e5a9862595d0d85a7268c1aa3a7ef31af8ff18282"
+  },
+  {
+    "file": "public/art/cards/c06.webp",
+    "bytes": 167138,
+    "sha256": "3b06eee1a1be260d3e0902c02c806a671378ffc355bfb0e265abece989c9736d"
+  },
+  {
+    "file": "public/art/cards/c07.png",
+    "bytes": 2775243,
+    "sha256": "b3404e367c82553591669c9c10fb0cbc1ecd722323d1a788158e50c90dc3402f"
+  },
+  {
+    "file": "public/art/cards/c07.webp",
+    "bytes": 176078,
+    "sha256": "d0f5d9e5734fec3df23c9a11cdfe9eb7b1629f28e9be8b01071cd85167d28cf8"
+  },
+  {
+    "file": "public/art/cards/c08.png",
+    "bytes": 2986445,
+    "sha256": "48eff5928c76cadd06b8d50b80c1d1432c790d4634c0e28e1c6bcbe598a8ad4b"
+  },
+  {
+    "file": "public/art/cards/c08.webp",
+    "bytes": 185784,
+    "sha256": "9f68f61ece27fc792901995d918678bcd16d52b2eefc51c0c2f0f7a8e135ab82"
+  },
+  {
+    "file": "public/art/cards/c09.png",
+    "bytes": 2661680,
+    "sha256": "de91a6ec1b08a2447867084325cb7b26f32fa712e0ca305401f628fe01c6da39"
+  },
+  {
+    "file": "public/art/cards/c09.webp",
+    "bytes": 175298,
+    "sha256": "fe269b5080c262c533e1309450391a2215f98b9bfe378089172cc84f65d680dd"
+  },
+  {
+    "file": "public/art/cards/c10.png",
+    "bytes": 2717167,
+    "sha256": "222d3c375a8c21e6212c4764579ab3af83ba237feef4a73e7fe1e790c6469931"
+  },
+  {
+    "file": "public/art/cards/c10.webp",
+    "bytes": 136412,
+    "sha256": "0b905f2bf5b77caf77aa44b71c5252bfb59b59c42363d006ed10da137392420c"
+  },
+  {
+    "file": "public/art/cards/c11.png",
+    "bytes": 2830394,
+    "sha256": "0bcc773001ec10e34b4192cb21d7930f8b64cfe19cf6d6c727dca08dc07cdd4e"
+  },
+  {
+    "file": "public/art/cards/c11.webp",
+    "bytes": 163618,
+    "sha256": "e546bb7fef31bfe3c064798e8ddf72a9c03127cef0e96462a34dc74d598279c5"
+  },
+  {
+    "file": "public/art/cards/c12.png",
+    "bytes": 2476052,
+    "sha256": "890b81d314c1ebba7773a6cde2bf58eef0cc8b821ff1d7fedd4217436cd1f527"
+  },
+  {
+    "file": "public/art/cards/c12.webp",
+    "bytes": 132996,
+    "sha256": "a10034db1b3fcc84d0e1779cde832831cccce62123dfa6e01b522b5a9f84f3b5"
+  },
+  {
+    "file": "public/art/cards/c13.png",
+    "bytes": 2421273,
+    "sha256": "6fb74b13c58131c130e06f069ab69605be7843bdabd83ad8a94414576211b99b"
+  },
+  {
+    "file": "public/art/cards/c13.webp",
+    "bytes": 133708,
+    "sha256": "40348a8a0c3760866de1543a79d0aac8eefcf4774322b74773bb28557ce75d3d"
+  },
+  {
+    "file": "public/art/cards/c14.png",
+    "bytes": 2338052,
+    "sha256": "7b925d3ee3128ff76042113bc4759baa01d3d09e5adcd3b30d169ffc1cd9854e"
+  },
+  {
+    "file": "public/art/cards/c14.webp",
+    "bytes": 112060,
+    "sha256": "2d588f0b66e301241a87dd7f3b9426bee4d82105c01c205d397a457260e7a58f"
+  },
+  {
+    "file": "public/art/cards/c15.png",
+    "bytes": 1820120,
+    "sha256": "783e10bca3cf16193486981b5d7e3bc6936dd20081a1df063053c44227d1348d"
+  },
+  {
+    "file": "public/art/cards/c15.webp",
+    "bytes": 79398,
+    "sha256": "5d4fa105a9bfbc97fe29dbd9beb3f2eb97f0dbed686751a616573f20692cbd90"
+  },
+  {
+    "file": "public/art/cards/c16.png",
+    "bytes": 2326861,
+    "sha256": "5c3406e9999fb9c3c0c9953b5251b41b034236bbd83a804412188ca6b98cc493"
+  },
+  {
+    "file": "public/art/cards/c16.webp",
+    "bytes": 125570,
+    "sha256": "4e8a02055f6a410144a2be95bc2ffa8f5435b4a188052c97d43f36428f975b80"
+  },
+  {
+    "file": "public/art/cards/c17.png",
+    "bytes": 2069492,
+    "sha256": "cc8d32cc9b0b7a47795d664e493b5063520ba4e142a5e96e8b8870d60ce65385"
+  },
+  {
+    "file": "public/art/cards/c17.webp",
+    "bytes": 100602,
+    "sha256": "1a19058d457c8b1ef4272ebc062d92a4a21cb684e6f17294bfe480a97e0fe662"
+  },
+  {
+    "file": "public/art/cards/c18.png",
+    "bytes": 2300862,
+    "sha256": "cc8bf7f995aeede164e5feecc0d13cf082ca6fd806b04c7e3ca57293d1be7124"
+  },
+  {
+    "file": "public/art/cards/c18.webp",
+    "bytes": 118802,
+    "sha256": "cb2a7c74cca10f5c346339480b7d51e3af65be3c5da1cd5a0a50b7c259819676"
+  },
+  {
+    "file": "public/art/cards/c19.png",
+    "bytes": 2059484,
+    "sha256": "64ce06d1a518995ad9ded7e041e96ce53b1dc4dcddd05c3273682e0f2d07dadf"
+  },
+  {
+    "file": "public/art/cards/c19.webp",
+    "bytes": 96744,
+    "sha256": "d20a8d7166f70c2d2f7e728b3f9003616d192b2976676cb4bc8f521de662b174"
+  },
+  {
+    "file": "public/art/cards/c20.png",
+    "bytes": 2033063,
+    "sha256": "9093d5eba3848ef6fb56aaed68b308fdad962a134e07ff979f030c65c88c96f7"
+  },
+  {
+    "file": "public/art/cards/c20.webp",
+    "bytes": 93768,
+    "sha256": "324c62aeb007b9b4cb26a54af163453d2b40d3b275d628c8fb032f6a11a0eec8"
+  },
+  {
+    "file": "public/art/cards/c21.png",
+    "bytes": 2417489,
+    "sha256": "48bca17e90eab7aff4b8d6d1b3014210590ffcec68ecdb78684480d1d03be6f6"
+  },
+  {
+    "file": "public/art/cards/c21.webp",
+    "bytes": 130336,
+    "sha256": "4aac3f02f20c839e475026fe6a516868b9062ba3f824899ec9d58d2937832cd2"
+  },
+  {
+    "file": "public/art/cards/c22.png",
+    "bytes": 2073650,
+    "sha256": "bc8716ec6b7065332fe0f13b2947a4925a2de49d20142564b67b33fca09de09c"
+  },
+  {
+    "file": "public/art/cards/c22.webp",
+    "bytes": 101016,
+    "sha256": "4d36e578702edffb98b8f38a33a3a39bed72d4a52896985ee3cb3c2f49efb50b"
+  },
+  {
+    "file": "public/art/cards/c23.png",
+    "bytes": 2451386,
+    "sha256": "96e6494ec1e8a553c20c78d61a1cf41d41e2a7d08c18531bb5071ac68b0ee115"
+  },
+  {
+    "file": "public/art/cards/c23.webp",
+    "bytes": 144654,
+    "sha256": "b472727c6050c06c471f18b7c9d4e3faef139092b7a0d9074b19459c75910a7c"
+  },
+  {
+    "file": "public/art/cards/c24.png",
+    "bytes": 2527140,
+    "sha256": "9a3d78fb840091bf9f258705217cca1900df1d36579683b348310f7e1f31faca"
+  },
+  {
+    "file": "public/art/cards/c24.webp",
+    "bytes": 128090,
+    "sha256": "6044e70b43547080596a60eb26ef6508305ed175f67b623c6ae4c8bf323878d3"
+  },
+  {
+    "file": "public/art/cards/c25.png",
+    "bytes": 3108888,
+    "sha256": "e808cec8bced4dc415318f2ad96b59c02e4ac1a3c6a4ed32840097bb4c61ad88"
+  },
+  {
+    "file": "public/art/cards/c25.webp",
+    "bytes": 140466,
+    "sha256": "e7da6c72d61a6aee0969467c2fbbbfce5a1e6a6e6b3361eccbe2dabf8c9d23c5"
+  },
+  {
+    "file": "public/art/cards/c26.png",
+    "bytes": 2573275,
+    "sha256": "8a5f96041ddbd9c47e764b1c4f221bdfa10193159165c406e1fa758c09658c64"
+  },
+  {
+    "file": "public/art/cards/c26.webp",
+    "bytes": 119876,
+    "sha256": "2b84685038619fc9143fc46e9b49becd0be82d6c6270ff4f3f4248e657af4730"
+  },
+  {
+    "file": "public/art/cards/c27.png",
+    "bytes": 1909330,
+    "sha256": "2a3ef3e38c431cc7739ba48df4085d63da695b9f9f12e9ded46e152d7bea64ea"
+  },
+  {
+    "file": "public/art/cards/c27.webp",
+    "bytes": 84428,
+    "sha256": "b3e2bf119c4bf0f171c40f78ba331c955684039f19ea65229df4902392b1f6cf"
+  },
+  {
+    "file": "public/art/cards/c28.png",
+    "bytes": 2819365,
+    "sha256": "68b935ee49632a4b133bc12ba8f38d1e6e3de6d07f78ad1835fb4fa47fe7e95d"
+  },
+  {
+    "file": "public/art/cards/c28.webp",
+    "bytes": 157690,
+    "sha256": "2740c41108a7acb2d5d69f47435cd16eb29231bf0c115bc0defb2312e1a2e71c"
+  },
+  {
+    "file": "public/art/cards/c29.png",
+    "bytes": 2528628,
+    "sha256": "765a903835c42e7721365501159cad37c6335b2f04f2fde7fb21a65f3f6f3c61"
+  },
+  {
+    "file": "public/art/cards/c29.webp",
+    "bytes": 131096,
+    "sha256": "66714d982340ce1690b491ec616e3ad60fadcfbf99550d394e744b2e64bf89c9"
+  },
+  {
+    "file": "public/art/cards/c30.png",
+    "bytes": 1972060,
+    "sha256": "0c24367b080b1657cf2ddbe653510dce3d2f38d01bc0e4126a05e00836f9151c"
+  },
+  {
+    "file": "public/art/cards/c30.webp",
+    "bytes": 78866,
+    "sha256": "8a9c1c5c6ffe11cc0f6799c822f5dec0e146c483f4793b9f7abe20d07c18efb5"
+  },
+  {
+    "file": "public/art/cards/c31.png",
+    "bytes": 1641131,
+    "sha256": "5b1421a0169b4d285094f9a3a5b55efeb71bd2d7d8256a359ec0859b59483789"
+  },
+  {
+    "file": "public/art/cards/c31.webp",
+    "bytes": 65864,
+    "sha256": "1d08a8bdf9ec51a05b37824e014a6f64356740afcbdc7ecb859c3fd39f772a1b"
+  },
+  {
+    "file": "public/art/cards/c32.png",
+    "bytes": 1795764,
+    "sha256": "91a95e69ccac002fc031942744d957476b64d70eb72776745d4a8a5181f756bf"
+  },
+  {
+    "file": "public/art/cards/c32.webp",
+    "bytes": 69370,
+    "sha256": "90646ada19f4e2d32874f7b368d23458c4a90725a31823932e0231947a5c4fd5"
+  },
+  {
+    "file": "public/favicon.png",
+    "bytes": 5484,
+    "sha256": "e6b807c87234006e766c8754275ae4a421a600c05eca09b67a49184612ca321a"
+  }
+]

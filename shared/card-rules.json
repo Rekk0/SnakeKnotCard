@@ -1,0 +1,258 @@
+[
+  {
+    "id": "c01",
+    "name": "撕纸条",
+    "rules": "本轮玩家口叼纸条，由下家用嘴撕下一块，直至有人拒绝执行。（下家执行后上家嘴中没有可见纸条即判定失败）",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c02",
+    "name": "敲 7",
+    "rules": "从本轮玩家起按座次报数，含 7 或为 7 倍数时拍手代替。执行错误或对执行正确者发起质疑即判定失败",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "全场"
+  },
+  {
+    "id": "c03",
+    "name": "国王牌",
+    "rules": "全场加冕，本轮玩家成为国王，拥有最高权限（改游戏规则都行那么高）。违抗国王旨意，受罚一次。后续游戏中的新王将取代旧王。",
+    "defaultCount": 4,
+    "effect": "全场加冕光效，数道光线快速从四方汇聚到抽中者头像上，然后显现皇冠并爆发光效；皇冠戴在抽中者头像与名字上，显示 xxx 已被加冕为王",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c04",
+    "name": "过 5 关",
+    "rules": "本轮玩家摆放五张扑克牌，依次猜测下一张扑克牌比所摆放的扑克牌更大或更小；五次连续猜测正确即判定成功。若猜测错误，受罚一次，从第一张重新猜测。",
+    "defaultCount": 4,
+    "effect": "骑马武将形象，骑马疾驰，快速挥刀五次；要有五道明显刀光",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c05",
+    "name": "强制换座",
+    "rules": "基础测试：主持选两位参玩者，现场交换完成后确认，系统交换两人座次并推进。持有牌跟随玩家。",
+    "defaultCount": 3,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c06",
+    "name": "Sm 大冒险",
+    "rules": null,
+    "defaultCount": 0,
+    "effect": null,
+    "effectScope": null
+  },
+  {
+    "id": "c07",
+    "name": "选择一名异性告白",
+    "rules": "本轮玩家需要选择在座另一位异性参与者告白；对方接受告白后，判定成功。",
+    "defaultCount": 4,
+    "effect": "一个单膝下跪告白的场景剪影，有花瓣和鸽子飞舞",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c08",
+    "name": "小姐牌",
+    "rules": "本轮玩家成为小姐，直至下一张小姐出现或游戏结束。期间任何受罚玩家都可以叫出小姐的昵称，小姐陪同受罚者共同受罚。",
+    "defaultCount": 4,
+    "effect": "全场粉红光效，唇印搭配亲吻声音出现；一个身姿妖娆的剪影缓缓走出，捧杯敬酒。唇印闪烁在抽中者头像与名字上，显示 xxx 已决心下海",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c09",
+    "name": "帮助老板",
+    "rules": "本轮玩家对全场消费最高者敬酒并说一句谢谢您对蛇结的贡献",
+    "defaultCount": 2,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c10",
+    "name": "寻找老板帮助",
+    "rules": "持有者在受罚时可以使用该牌，请老板代为受罚",
+    "defaultCount": 2,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c11",
+    "name": "时间停止器",
+    "rules": null,
+    "defaultCount": 0,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c12",
+    "name": "铁锁连环",
+    "rules": "本轮玩家选择另一名参与者进行连结；在此期间共享所有机制和惩罚；或者使用本张卡牌解除场上已有的任一连结关系。",
+    "defaultCount": 4,
+    "effect": "两个人影初始分开站，一道铁链飞出把两人捆在一起",
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c13",
+    "name": "S 牌",
+    "rules": "本轮玩家成为S，可以任意命令持有M牌的玩家；若场上未有M牌则暂不生效。",
+    "defaultCount": 1,
+    "effect": "一只手的剪影从左侧伸出，拽住牵引链条往猛的一拉，然后牵引链条绷直抖动，链条周围绽出光点",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c14",
+    "name": "M 牌",
+    "rules": "本轮玩家成为M，需要听从持有S牌玩家的指令且不受国王影响。若场上未有S牌则暂不生效。",
+    "defaultCount": 1,
+    "effect": "一个眼睛以下，脖子下段以上的剪影缓缓从右侧进入；脖子上有项圈，牵引链条猛然向左拉，牵引链条绷直抖动，链条周围绽出光点",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c15",
+    "name": "主人牌",
+    "rules": "与此牌持有者沟通时必须称呼为主人",
+    "defaultCount": 3,
+    "effect": "仰拍一个高大身影剪影，缓缓附身伸手像要摸头",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c16",
+    "name": "擦边",
+    "rules": "本轮拿出手机连续刷10个视频，没有任何异性擦边视频即为成功，如果有便重置计数，每次重置计数则受罚一次。首轮即成功可以指定任一参赛者受罚。",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c17",
+    "name": "锁骨传酒",
+    "rules": "把酒倒在自己锁骨上下家喝",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c18",
+    "name": "模子牌",
+    "rules": "本轮玩家选择拍卖”男模“或”女模“并说出希望模子介绍自己的三个特质以及拍得模子的玩家将享受模子的什么服务;所有模子起立轮流介绍自己：姓名+年纪+特质，异性进行拍卖，没有被拍卖出去的模子或没有拍5到模子的参与者受罚。",
+    "defaultCount": 3,
+    "effect": "从右侧开门，走出一排身材极佳打扮华丽的男女，站定后一齐鞠躬（剪影）",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c19",
+    "name": "手铐",
+    "rules": "本轮玩家与上家用手铐各自将一只手拷在一起",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c20",
+    "name": "逛三园",
+    "rules": "本轮玩家说出一个”品类“并说出其中一个内含物，按座次依次举例且不重复，重复或不属于该品类则受罚。",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "全场"
+  },
+  {
+    "id": "c21",
+    "name": "定时传花",
+    "rules": "击鼓穿花",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "全场"
+  },
+  {
+    "id": "c22",
+    "name": "PK",
+    "rules": "线下选择任意参赛者，以任意游戏进行PK，败者受罚。",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c23",
+    "name": "狗狗牌",
+    "rules": "本轮玩家成为狗狗，由所有其他参赛者竞拍；狗狗需要对拍得者下跪并且让摸摸自己的头。狗狗可以拒绝但是必须喝掉拍卖者的酒。",
+    "defaultCount": 3,
+    "effect": "狗狗剪影从左侧跑出，然后坐下伸舌头抬头看",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c24",
+    "name": "狗叫",
+    "rules": "本轮玩家需对任一参与者在耳边狗叫10秒",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c25",
+    "name": "kiss",
+    "rules": "下家蒙住本轮玩家的眼睛，并随机指人；本轮玩家选中后，和被选中的参与者隔着纸巾嘴对嘴五秒。",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c26",
+    "name": "发菜",
+    "rules": "本轮玩家将一个异性微信名片推给任一其他参与者；对房满意则对方受罚，不满意则由本轮玩家受罚",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "本轮玩家"
+  },
+  {
+    "id": "c27",
+    "name": "短择",
+    "rules": "本轮玩家若对其他任何参与者有好感，自己受罚一次；其他参与者若认为是自己，同样受罚一次。",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "全场"
+  },
+  {
+    "id": "c28",
+    "name": "大哥",
+    "rules": "持有此卡时，在任一参与者受罚时都可以大喊，“我配不配上你多喝一杯”并让受罚者多受罚一次",
+    "defaultCount": 2,
+    "effect": null,
+    "effectScope": "全场"
+  },
+  {
+    "id": "c29",
+    "name": "生日快乐",
+    "rules": "本轮玩家成为寿星，每个人都向寿星敬酒并祝福生日快乐。",
+    "defaultCount": 4,
+    "effect": "生日蛋糕点起蜡烛然后撒下纸花",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c30",
+    "name": "下头",
+    "rules": "持有此卡时，可以在发现其他参与者使用手机进行该游戏以外的活动时，大喊下头，并让其受罚一次。",
+    "defaultCount": 2,
+    "effect": "玩手机的人的剪影低头看手机，突然冲出一个人飞起一脚踢飞手机",
+    "effectScope": "全场"
+  },
+  {
+    "id": "c31",
+    "name": "小圈子",
+    "rules": "本轮玩家说出一个范围，参与者按座次依次说出自己所选的种类，种类人数最少的参与者受罚一次",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "全场"
+  },
+  {
+    "id": "c32",
+    "name": "天菜",
+    "rules": "本轮玩家用三个词形容在场的一位其他参与者，所有人进行猜测。猜错者受罚一次",
+    "defaultCount": 4,
+    "effect": null,
+    "effectScope": "全场"
+  }
+]

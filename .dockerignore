@@ -1,0 +1,10 @@
+node_modules
+data
+.git
+.env
+test-results
+playwright-report
+dist
+docs/visuals
+public/art/cards/*.png
+public/art/brand/*.png

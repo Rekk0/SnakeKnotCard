@@ -1,0 +1,13 @@
+import { mkdirSync } from "node:fs";
+import { resolve } from "node:path";
+import { Store } from "../server/store.js";
+const dir = resolve(`data/qa-${process.pid}`);
+mkdirSync(dir, { recursive: true });
+const store = new Store(dir);
+store.createHost("qa-host", "local-qa-password-2026");
+store.createHost("qa-host-2", "local-qa-password-2026");
+store.createHost("qa-host-3", "local-qa-password-2026");
+store.close();
+process.env.DATA_DIR = dir;
+process.env.PORT = "5197";
+await import("../server/index.js");
